@@ -1,0 +1,49 @@
+mask:
+    permission-name: shadow
+    spell-class: ".targeted.DisguiseSpell"
+    name: mask
+    entity-type: player
+    nameplate-text: Assassin
+    always-show-nameplate: false
+    target-self: true
+    friendly-mobs: true
+    spell-icon: 397:1
+    cast-item: bone
+    cooldown: 1
+    toggle: true
+    duration: 600
+    cost:
+        - mana 20
+    use-cost:
+        - mana 10
+    memory: 5
+    use-cost-interval: 5
+    description: |
+        &rMask   5 Memory   Shadow School
+        &3Puts you in incognito mode for a time, giving you an unidentifiable skin and name.
+    str-cost: 20 mana, plus 10 mana every 5 seconds
+    str-cast-self: You mask yourself!
+    str-fade: Your cover is blown.
+track:
+    permission-name: shadow
+    spell-class: ".targeted.TrackSpell"
+    name: track
+    targeted: true
+    cooldown: 10
+    cost:
+        - mana 20
+    str-cost: 20 mana
+    memory: 5
+    description: |
+        &rtrack   5 Memory   Shadow School
+        &3gives you the targets coörds in chat
+    can-cast-with-item: true
+    can-cast-by-command: true
+    require-exact-name: false
+    require-acceptance: false
+    str-usage: |
+        Usage: /cast track <playername>, or /cast track
+        while looking at a sign with a player name on the first line.
+    str-no-target: Target player not found.
+    str-cast-self-target: "Push F3"
+    str-cast-target-prefix: "Target's coörds:"
