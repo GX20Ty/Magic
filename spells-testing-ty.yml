@@ -47,3 +47,26 @@ track:
     str-no-target: Target player not found.
     str-cast-self-target: "Push F3"
     str-cast-target-prefix: "Target's coörds:"
+backstab:
+    permission-name: shadow
+    spell-class: ".targeted.ShadowstepSpell"
+    name: Backstab
+    cast-item: bone
+    can-target: players
+    target-players: true
+    targeted: true
+    can-cast-with-item: true
+    can-cast-by-command: false
+    range: 20
+    min-range: 4
+    cooldown: 1
+    cost:
+        - mana 20
+    str-cost: 20 mana
+    memory: 5
+    description: |
+        &rbackstab   5 Memory   Shadow School
+        &3teleports you behind your target
+    str-usage: |
+        Usage: right-click on a player to target.
+    str-no-target: Target player not found.
