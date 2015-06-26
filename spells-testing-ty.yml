@@ -70,3 +70,42 @@ backstab:
     str-usage: |
         Usage: right-click on a player to target.
     str-no-target: Target player not found.
+hawkeye1:
+    permission-name: shadow
+    spell-class: ".targeted.homingmissilespell"
+    name: hawkeye
+    cast-item: bow
+    can-cast-by-command: true
+    can-cast-with-item: false
+    can-target: players
+    require-hit-entity: false
+    require-cast-item-on-command: true
+    bindable: false
+    projectile-velocity: 53
+    hit-radius: 120
+    render-distance: 120
+    projectile-inertia: 0
+    memory: 5
+    description: |
+        &rhawkeye   5 Memory   Shadow School
+        &3let's you hit a target with a arrow by a 100% chance, normal arrow range applies.
+    str-usage: |
+        Usage: /cast hawkeye <playername>   whilst holding a bow
+    cost: 
+        - 262
+        - mana 40
+    str-cost: 20 mana and an arrow
+    target-players: true
+    effects:
+        - position: special
+        - effect: particles
+        - particle-name: crit
+hawkeye2:
+    permission-name: shadow
+    name: hawkeye-damage
+    can-cast-by-command: false
+    can-target: players
+    bindable: false
+    spell-class: ".targeted.painspell"
+    damage: 10
+    ignore-armor: false
